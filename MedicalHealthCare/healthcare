@@ -1,0 +1,50 @@
+/*
+SQLyog Community v13.1.6 (64 bit)
+MySQL - 5.0.24-community-nt : Database - medical
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`medical` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `medical`;
+
+/*Table structure for table `healthcare` */
+
+DROP TABLE IF EXISTS `healthcare`;
+
+CREATE TABLE `healthcare` (
+  `id` int(10) NOT NULL auto_increment,
+  `category` varchar(20) NOT NULL,
+  `firstname` varchar(40) NOT NULL,
+  `lastname` varchar(40) NOT NULL,
+  `mobileNumber` varchar(15) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `weight` int(12) NOT NULL,
+  `height` int(15) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `healthcare` */
+
+insert  into `healthcare`(`id`,`category`,`firstname`,`lastname`,`mobileNumber`,`address`,`gender`,`weight`,`height`) values 
+(1,'enduser','atul','tomar','8976543210','gujrat','male',60,170),
+(4,'enduser','pankaj','sharma','34567890321','bhopal','male',70,140),
+(6,'enduser','nikki','chohan','8976543210','gujrat','female',60,172),
+(7,'enduser','sonam','chohal','8976543210','gujrat','female',60,172),
+(8,'enduser','sonam','chohal','8976543210','gujrat','female',60,172),
+(9,'enduser','reeya','dev','8976643210','gujrat','female',65,172),
+(10,'enduser','reeya','dev','8976643210','gujrat','female',65,172);
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
